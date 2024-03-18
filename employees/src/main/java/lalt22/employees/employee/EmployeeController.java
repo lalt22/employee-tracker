@@ -20,7 +20,8 @@ public class EmployeeController {
 	
 	@PostMapping
 	public ResponseEntity<Employee> createEmployee(@Valid @RequestBody CreateEmployeeDTO data) {
-		System.out.print(data.getFirstName());
+		System.out.println(data.getFirstName());
+		System.out.println(data.getLastName());
 		Employee createdEmployee = this.employeeService.createEmployee(data);
 		return new ResponseEntity<>(createdEmployee, HttpStatus.CREATED);
 	}

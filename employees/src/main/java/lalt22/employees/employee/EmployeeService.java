@@ -19,6 +19,7 @@ public class EmployeeService {
 	
 	public Employee createEmployee(CreateEmployeeDTO data) {
 		Employee newEmployee = this.mapper.map(data, Employee.class);
+		System.out.println(newEmployee.toString());
 		return this.employeeRepository.save(newEmployee);
 	}
 }
