@@ -14,7 +14,7 @@ To-do:
 - Read functionality
 - Wireframe frontend
 
-## 25 March 2024
+### 25 March 2024
 Fixed DTO bugs
 Done:
 - Implemented delete functionality
