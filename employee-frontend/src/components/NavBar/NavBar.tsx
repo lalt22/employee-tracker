@@ -9,7 +9,7 @@ const NavBar = () => {
             <nav className={styles.nav_bar}>
                 <div className={styles.nav_left}>
                 <img className="track" src={track} />
-                    <NavLink to="trackEmp/">
+                    <NavLink to="trackEmp/employees">
                         <h1>trackEmp</h1>
                     </NavLink>
                 </div>

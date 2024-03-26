@@ -1,7 +1,8 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import "./CreatePage.scss"
+import { createNewEmployee } from "../../services/employeeService";
 
-type Inputs = {
+export type Inputs = {
     firstName: string
     middleName: string
     lastName: string
@@ -11,6 +12,7 @@ type Inputs = {
     permOrContract: string
     startDate: Date
     finishDate: Date
+    isOngoing: boolean
     fullTimeOrPartTime: string
     hoursPerWeek: number
 }
@@ -24,7 +26,7 @@ const CreatePage = () => {
     } = useForm<Inputs>()
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {
-        
+        createNewEmployee(data)
     }
 
 
@@ -127,6 +129,11 @@ const CreatePage = () => {
                 <label className="input-label">
                     Finish Date<br/>
                     <input type="date" {...register("finishDate")}/>
+                </label>
+
+                <label >
+                    <input type="checkbox" {...register("isOngoing")}/>
+                    Ongoing?
                 </label>
 
                 <label className="input-label">

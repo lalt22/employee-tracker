@@ -1,5 +1,6 @@
 import EmployeeCard from "../../components/EmployeeCard/EmployeeCard";
 import { Employee } from "../../services/employeeService";
+import "./EmployeeList.scss"
 
 interface EmployeeListInterface {
     employees: Employee[] | null

@@ -10,14 +10,11 @@ import CreatePage from './pages/CreatePage/CreatePage';
 import EmployeePage from './pages/EmployeePage/EmployeePage';
 
 function App() {
-  const [employees, setEmployees] = useState<Employee[] | null>(null);
-  // getAllEmployees().then((res) => setEmployees(res));
   return (
       <RefreshContextProvider>
         <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path='trackEmp/' element={<HomePage />}/>
           <Route path='trackEmp/employees' element={<EmployeesPage />}/>
           <Route path='trackEmp/new' element={<CreatePage />}/>
           <Route path='trackEmp/employee/:id' element={<EmployeePage />}/>

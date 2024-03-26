@@ -10,7 +10,30 @@
     & .data-btns {
         display: flex;
         justify-content: space-around;
+        align-items: center;
         margin-top: 20px;
+
+        & button {
+            display: flex;
+            justify-content: center;
+            width: 8%;
+
+            &.number {
+                width: 3%;
+            }
+
+            &.email {
+                font-size: small;
+            }
+
+            &.mobile {
+                font-size: small;
+            }
+        }
+
+
+
+
     }
 
     & .new-emp {

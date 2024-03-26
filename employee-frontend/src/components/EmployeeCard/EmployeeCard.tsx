@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Employee } from "../../services/employeeService";
 import "./EmployeeCard.scss"
 
@@ -18,18 +19,17 @@ const formatDate = (date: string): any => {
 const EmployeeCard = ({employee}: EmployeeCardInterface) => {
     return (
         <div className="employee-card">
-            <p>{employee.id}</p>
-            <p>{employee.firstName}</p>
-            <p>{employee.middleName}</p>
-            <p>{employee.lastName}</p>
-            <p>{employee.email}</p>
-            <p>{employee.mobileNumber}</p>
-            <p>{employee.address}</p>
-            <p>{formatDate(employee.startDate)}</p>
-            <p>{formatDate(employee.finishDate)}</p>
-            <p>{employee.isOngoing}</p>
-            <p>{employee.isFullTime}</p>
-            <p>{employee.hoursPerWeek}</p>
+            <Link to={`employee/${employee.id}`} className="data number">{employee.id}</Link>
+            <p className="data name">{employee.firstName}</p>
+            <p className="data name">{employee.middleName}</p>
+            <p className="data name">{employee.lastName}</p>
+            <p className="data email">{employee.email}</p>
+            <p className="data mobile">{employee.mobileNumber}</p>
+            <p className="data">{formatDate(employee.startDate)}</p>
+            <p className="data">{employee.permOrContract}</p>
+            <p className="data number">{employee.isOngoing ? "true": "false"}</p>
+            <p className="data number">{employee.isFullTime}</p>
+            <p className="data number">{employee.hoursPerWeek}</p>
         </div>
     )
 }
