@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
-import { Employee } from "../../services/employeeService";
+import { Employee, deleteEmployeeById } from "../../services/employeeService";
 import "./EmployeeCard.scss"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCancel, faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from "react";
+import { RefreshContext } from "../../context/RefreshContextProvider";
+
 
 interface EmployeeCardInterface {
     employee: Employee
@@ -17,9 +22,16 @@ const formatDate = (date: string): any => {
 
 
 const EmployeeCard = ({employee}: EmployeeCardInterface) => {
+    const {refresh, setRefresh} = useContext(RefreshContext)
+
+    const handleDelete = () => {
+        deleteEmployeeById(employee.id).then(() => setRefresh(refresh+1))
+    }
+
     return (
         <div className="employee-card">
-            <Link to={`employee/${employee.id}`} className="data number">{employee.id}</Link>
+            <FontAwesomeIcon className="delete" icon={faTrash} onClick={handleDelete}/>
+            <Link to={`/trackEmp/employees/${employee.id}`} className="data number">{employee.id}</Link>
             <p className="data name">{employee.firstName}</p>
             <p className="data name">{employee.middleName}</p>
             <p className="data name">{employee.lastName}</p>

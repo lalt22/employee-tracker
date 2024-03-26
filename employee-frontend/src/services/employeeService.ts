@@ -1,4 +1,4 @@
-import { Inputs } from "../pages/CreatePage/CreatePage";
+import { Inputs } from "../components/Form/Form";
 
 export interface Employee {
     id: number;
@@ -52,4 +52,29 @@ export const createNewEmployee = async (data: Inputs): Promise<Employee | null> 
     });
 
     return null;
+};
+
+export const deleteEmployeeById = async (id: number): Promise<Employee | null> => {
+    const res = await fetch(`http://localhost:8100/employees/${id}`, {
+        method: "DELETE",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
+    if (!res.ok) {
+        throw new Error("Failed to delete Employee");
+    }
+    return null;
+};
+
+
+export const getEmployeeById = async (id: number): Promise<Employee | null> => {
+    const res = await fetch(`http://localhost:8100/employees?id=${id}`, {
+        method: "GET"
+    });
+    if (!res.ok) {
+        throw new Error('Could not get Employee');
+    }
+    const data = await res.json();
+    return data[0];
 };

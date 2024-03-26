@@ -1,0 +1,10 @@
+.employee-page {
+    margin-top: 100px;
+    outline: 1px solid red;
+
+
+    & .info-wrapper {
+        width: 50%;
+        outline: 1px solid green;
+    }
+}
