@@ -1,6 +1,7 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Employee, createNewEmployee } from "../../services/employeeService";
 import "./Form.scss"
+import { useNavigate } from "react-router-dom";
 export type Inputs = {
     firstName: string
     middleName: string
@@ -28,9 +29,13 @@ const Form = ({newEmployee}: formProps) => {
 
         formState: { errors }
     } = useForm<Inputs>()
+    const navigate = useNavigate();
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {
-        createNewEmployee(data)
+        if (!newEmployee) {
+            createNewEmployee(data).then((res) => navigate(`/trackEmp/employees/${res?.id}`))
+        }
+
     }
 
     const firstNamePlaceholder = newEmployee?.firstName || "First Name";

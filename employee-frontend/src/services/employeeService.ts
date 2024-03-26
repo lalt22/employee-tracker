@@ -50,8 +50,11 @@ export const createNewEmployee = async (data: Inputs): Promise<Employee | null> 
             hoursPerWeek: data.hoursPerWeek
         })
     });
+    if (!res.ok) {
+        throw new Error("Could not create employee");
+    }
 
-    return null;
+    return res.json();
 };
 
 export const deleteEmployeeById = async (id: number): Promise<Employee | null> => {
