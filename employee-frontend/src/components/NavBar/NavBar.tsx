@@ -13,13 +13,6 @@ const NavBar = () => {
                         <h1>trackEmp</h1>
                     </NavLink>
                 </div>
-
-                <div className={styles.nav_right}>
-                    <NavLink to="trackEmp/employees/">
-                        <p>See Employees</p>
-                    </NavLink>
-                </div>
-
             </nav>
         </div>
 

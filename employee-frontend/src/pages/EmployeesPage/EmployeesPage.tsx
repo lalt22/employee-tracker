@@ -20,7 +20,7 @@ const EmployeesPage = () => {
 
     return (
         <div className="employees">
-            <button onClick={handleNew} className="new-emp">Add New</button>
+            <button onClick={handleNew} className="new-emp">Add Employee</button>
             <div className="data-btns">
                 <button className="number">ID</button>
                 <button className="name">First Name</button>

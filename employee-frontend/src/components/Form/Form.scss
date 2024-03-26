@@ -1,0 +1,36 @@
+.new-emp-page {
+    height: 100%;
+}
+
+.new-emp-form {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+
+    & .section-wrapper {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        gap: 40px;
+    }
+
+    & .submit {
+        height: 10%;
+        width: 10%;
+        margin-top: 20px;
+        align-self: flex-start;
+        padding: 10px;
+        border-radius: 10px;
+        outline: 1px solid transparent;
+        border: 1px solid transparent;
+        background-color: rgba(54, 54, 190, 0.822);
+        color: white;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
