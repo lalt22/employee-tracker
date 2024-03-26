@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useContext, useEffect, useRef, useState } from "react";
 import styles from "./NavBar.module.scss"
-import track from '../../../public/analysis.png'
+import track from '../../analysis.png'
 
 const NavBar = () => {
     return (

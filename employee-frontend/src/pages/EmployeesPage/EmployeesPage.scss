@@ -7,6 +7,12 @@
     display: flex;
     flex-flow: column;
 
+    & .data-btns {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
     & .new-emp {
         width: 10%;
         align-self: flex-end;
