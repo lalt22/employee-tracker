@@ -28,3 +28,10 @@ To-do:
 
 Long-Term:
 - Sort employees based on attributes
+
+### 26 March 2024
+Employee form created and reusable for new and editing.
+Rudimentary styling complete. 
+To-do:
+- update API functionality
+- refine profile page
