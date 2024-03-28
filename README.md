@@ -44,3 +44,4 @@ To-do:
 - Implement Google Maps API autocomplete
 - Update form validation using Zod
 - Start backend error handling
+- Start JUnit API testing
