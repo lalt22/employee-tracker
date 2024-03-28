@@ -1,5 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Employee, createNewEmployee } from "../../services/employeeService";
+import { Employee, createNewEmployee, editEmployeeById } from "../../services/employeeService";
 import "./Form.scss"
 import { useNavigate } from "react-router-dom";
 export type Inputs = {
@@ -32,8 +32,12 @@ const Form = ({newEmployee}: formProps) => {
     const navigate = useNavigate();
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {
+        console.log(data)
         if (!newEmployee) {
             createNewEmployee(data).then((res) => navigate(`/trackEmp/employees/${res?.id}`))
+        }
+        else {
+            editEmployeeById(newEmployee.id, data).then((res) => navigate(`/trackEmp/employees/${res?.id}`))
         }
 
     }
@@ -54,18 +58,18 @@ const Form = ({newEmployee}: formProps) => {
                     <h2>Personal Information</h2>
                     <label className="input-label">
                         First name
-                        <input placeholder={firstNamePlaceholder} {...register("firstName", {required: true})} />
+                        <input placeholder={firstNamePlaceholder} defaultValue={newEmployee?.firstName||""}  {...register("firstName", {required: true})} />
                         {errors.firstName && <span className="error">Please Enter First Name</span>}
                     </label>
 
                     <label className="input-label">
                         Middle name (if applicable)
-                        <input placeholder={middleNamePlaceholder} {...register("middleName")} />
+                        <input placeholder={middleNamePlaceholder} defaultValue={newEmployee?.middleName||""}  {...register("middleName")} />
                     </label>
 
                     <label className="input-label">
                         Last name
-                        <input placeholder={lastNamePlaceholder} {...register("lastName", {required: true})} />
+                        <input placeholder={lastNamePlaceholder} defaultValue={newEmployee?.lastName||""} {...register("lastName", {required: true})} />
                         {errors.lastName && <span className="error">Please Enter Last Name</span>}
                     </label>
                 </div>
@@ -74,7 +78,7 @@ const Form = ({newEmployee}: formProps) => {
                     <h2>Contact Details</h2>
                     <label className="input-label">
                         Email address
-                        <input placeholder={emailPlaceholder} {...register("email", {
+                        <input placeholder={emailPlaceholder} defaultValue={newEmployee?.email||""} {...register("email", {
                         required: {
                             value: true,
                             message: "Please enter an email address"
@@ -90,7 +94,7 @@ const Form = ({newEmployee}: formProps) => {
                     <label className="input-label">
                         Mobile number<br></br>
                         Must be an Australian mobile number
-                        <input placeholder={mobilePlaceholder} {...register("mobile", {
+                        <input placeholder={mobilePlaceholder} defaultValue={newEmployee?.mobileNumber||""}  {...register("mobile", {
                             required: {
                                 value: true,
                                 message: "Please enter a mobile number"
@@ -106,7 +110,7 @@ const Form = ({newEmployee}: formProps) => {
 
                     <label className="input-label">
                         Address<br/>
-                        <input placeholder={addressPlaceholder} {... register("address", {
+                        <input placeholder={addressPlaceholder} defaultValue={newEmployee?.address||""}  {... register("address", {
                             required: {
                                 value: true,
                                 message: "Please enter an address"
@@ -120,15 +124,15 @@ const Form = ({newEmployee}: formProps) => {
                     <h2>Employee Status</h2>
                     <label className="input-label">
                         Which contract type?
-                        <label>
-                            <input type="radio" value="permanent" id="permanent"
+                        <label id="permanent">
+                            <input type="radio" value="permanent"
                             {...register("permOrContract", {
                                 required: true})}/>
                             Permanent
 
                         </label>
-                        <label>
-                        <input type="radio" value="contract" id="contract"
+                        <label id="contract">
+                        <input type="radio" value="contract"
                             {...register("permOrContract", {
                                 required: true})} />
                             Contract
@@ -158,15 +162,15 @@ const Form = ({newEmployee}: formProps) => {
 
                     <label className="input-label">
                         Full-time or Part-time?
-                        <label>
-                        <input type="radio" value="fulltime" id="fulltime"
+                        <label id="fulltime">
+                        <input type="radio" value="fulltime"
                             {...register("fullTimeOrPartTime", {
                             required: true})}/>
                         Full-time
 
                         </label>
-                        <label>
-                        <input type="radio" value="parttime" id="parttime"
+                        <label id="parttime">
+                        <input type="radio" value="parttime"
                             {...register("fullTimeOrPartTime", {
                                 required: true})} />
                             Part-time

@@ -33,4 +33,35 @@
             cursor: pointer;
         }
     }
+
+    & h2 {
+        color: gray;
+        font-weight: 500;
+    }
+
+    & label {
+        color: gray;
+        font-weight: 500;
+
+        &#permanent {
+            color: black;
+            font-weight: 400;
+        }
+
+        &#contract {
+            color: black;
+            font-weight: 400;
+        }
+
+        &#fulltime {
+            color: black;
+            font-weight: 400;
+        }
+
+        &#parttime {
+            color: black;
+            font-weight: 400;
+        }
+
+    }
 }
