@@ -35,3 +35,12 @@ Rudimentary styling complete.
 To-do:
 - update API functionality
 - refine profile page
+
+### 27 March 2024
+Can sort attributes in ascending order
+Profile page refined
+
+To-do:
+- Implement Google Maps API autocomplete
+- Update form validation using Zod
+- Start backend error handling
