@@ -45,3 +45,4 @@ To-do:
 - Update form validation using Zod
 - Start backend error handling
 - Start JUnit API testing
+- Pass errors to user
