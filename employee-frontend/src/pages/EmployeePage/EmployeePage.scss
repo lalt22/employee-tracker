@@ -1,0 +1,50 @@
+.employee-page {
+    margin-top: 100px;
+    height: 100%;
+    width: 100%;
+    line-height: 250%;
+
+    & .employee-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    & .profile {
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+        justify-content: space-around;
+        width: 60%;
+    }
+
+    * .emp-image {
+        height: 300px;
+        width: 300px;
+        margin-right: 100px;
+    }
+
+    & .info-wrapper {
+        align-items: center;
+        padding-right: 80px;
+        margin-right: 300px;
+    }
+
+    & .details {
+        width: 20%;
+    }
+
+    & .edit {
+        margin-top: 50px;
+        margin-left: 80px;
+        height: 80px;
+        width: 200px;
+        background-color: rgba(54, 54, 190, 0.822);
+        color: white;
+    }
+
+    & h3,
+    h1 {
+        color: rgba(138, 131, 131, 0.753);
+        font-weight: 500;
+    }
+}
