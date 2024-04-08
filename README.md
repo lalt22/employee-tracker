@@ -14,7 +14,7 @@ To-do:
 - Read functionality
 - Wireframe frontend
 
-## 25 March 2024
+### 25 March 2024
 Fixed DTO bugs
 Done:
 - Implemented delete functionality
@@ -28,3 +28,21 @@ To-do:
 
 Long-Term:
 - Sort employees based on attributes
+
+### 26 March 2024
+Employee form created and reusable for new and editing.
+Rudimentary styling complete. 
+To-do:
+- update API functionality
+- refine profile page
+
+### 27 March 2024
+Can sort attributes in ascending order
+Profile page refined
+
+To-do:
+- Implement Google Maps API autocomplete
+- Update form validation using Zod
+- Start backend error handling
+- Start JUnit API testing
+- Pass errors to user
