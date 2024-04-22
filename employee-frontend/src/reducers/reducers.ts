@@ -1,5 +1,4 @@
-import { Employee } from "../services/employeeService";
-
+import { Employee } from "../store/features/employeeSlice";
 const initialState: Employee[] = [];
 
 const employeeReducer = (state = initialState, action: any) => {

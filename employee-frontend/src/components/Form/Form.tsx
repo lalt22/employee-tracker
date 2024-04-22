@@ -1,7 +1,9 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Employee, createNewEmployee, editEmployeeById } from "../../services/employeeService";
+import { createNewEmployee, editEmployeeById } from "../../services/employeeService";
+import { Employee } from "../../store/features/employeeSlice";
 import "./Form.scss"
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../store";
 export type Inputs = {
     firstName: string
     middleName: string

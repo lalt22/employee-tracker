@@ -28,7 +28,7 @@ public class CreateEmployeeDTO {
 	private String address;
 	
 	@NotNull
-	private int permOrContract;
+	private String permOrContract;
 	
 	@NotBlank
 	@JsonFormat(pattern="dd-mm-yyyy")
@@ -60,11 +60,11 @@ public class CreateEmployeeDTO {
 		this.address = address;
 	}
 
-	public int getPermOrContract() {
+	public String getPermOrContract() {
 		return permOrContract;
 	}
 
-	public void setPermOrContract(int permOrContract) {
+	public void setPermOrContract(String permOrContract) {
 		this.permOrContract = permOrContract;
 	}
 

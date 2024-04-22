@@ -1,8 +1,9 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { Employee, getEmployeeById } from "../../services/employeeService";
+import { getEmployeeById } from "../../services/employeeService";
 import { useContext, useEffect, useState } from "react";
 import { RefreshContext } from "../../context/RefreshContextProvider";
 import "./EmployeePage.scss"
+import { Employee } from "../../store/features/employeeSlice";
 
 
 interface EmployeePageInterface {

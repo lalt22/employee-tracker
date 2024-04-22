@@ -1,20 +1,5 @@
 import { Inputs } from "../components/Form/Form";
-
-export interface Employee {
-    id: number;
-    firstName: string;
-    middleName: string;
-    lastName: string;
-    email: string;
-    mobileNumber: string;
-    address: string;
-    permOrContract: number;
-    startDate: string;
-    finishDate: string;
-    isOngoing: boolean;
-    isFullTime: boolean;
-    hoursPerWeek: number;
-}
+import { Employee } from "../store/features/employeeSlice";
 
 
 export const getAllEmployees = async (): Promise<Employee[]> => {

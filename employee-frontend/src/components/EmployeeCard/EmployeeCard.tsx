@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
-import { Employee, deleteEmployeeById } from "../../services/employeeService";
 import "./EmployeeCard.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCancel, faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
-import { useContext } from "react";
-import { RefreshContext } from "../../context/RefreshContextProvider";
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
+import { Employee } from "../../store/features/employeeSlice"
 
 interface EmployeeCardInterface {
     employee: Employee
+    handleDelete: any
 }
 
 const formatDate = (date: string): any => {
@@ -21,16 +20,10 @@ const formatDate = (date: string): any => {
 }
 
 
-const EmployeeCard = ({employee}: EmployeeCardInterface) => {
-    const {refresh, setRefresh} = useContext(RefreshContext)
-
-    const handleDelete = () => {
-        deleteEmployeeById(employee.id).then(() => setRefresh(refresh+1))
-    }
-
+const EmployeeCard = ({employee, handleDelete}: EmployeeCardInterface) => {
     return (
         <div className="employee-card">
-            <FontAwesomeIcon className="delete" icon={faTrash} onClick={handleDelete}/>
+            <FontAwesomeIcon className="delete" icon={faTrash} onClick={() => handleDelete(employee)}/>
             <Link to={`/trackEmp/employees/${employee.id}`} className="data number">{employee.id}</Link>
             <p className="data name">{employee.firstName}</p>
             <p className="data name">{employee.middleName}</p>
