@@ -46,3 +46,12 @@ To-do:
 - Start backend error handling
 - Start JUnit API testing
 - Pass errors to user
+
+### 23 April 2024
+Added pyplot analytics. Connected mysql db to FastAPI python app to serve analytics images as an API
+Made styling changes to employees list
+
+To-do:
+- Refine form validation, especially on updates
+- Add more analytics, specifically regarding address demographics
+- Google Maps API integration
