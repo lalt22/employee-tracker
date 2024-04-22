@@ -56,3 +56,4 @@ To-do:
 - Add more analytics, specifically regarding address demographics
 - Google Maps API integration
 - Make charts interactable on frontend - hover to see %s, nums, etc
+- Make pages responsive for mobile
