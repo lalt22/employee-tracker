@@ -42,7 +42,7 @@ public class CreateEmployeeDTO {
 	private Boolean isFullTime;
 	
 	@NotNull
-	private Boolean hoursPerWeek;
+	private int hoursPerWeek;
 	
 	public String getFirstName() {
 		return firstName;
@@ -100,11 +100,11 @@ public class CreateEmployeeDTO {
 		this.isFullTime = isFullTime;
 	}
 
-	public Boolean getHoursPerWeek() {
+	public int getHoursPerWeek() {
 		return hoursPerWeek;
 	}
 
-	public void setHoursPerWeek(Boolean hoursPerWeek) {
+	public void setHoursPerWeek(int hoursPerWeek) {
 		this.hoursPerWeek = hoursPerWeek;
 	}
 

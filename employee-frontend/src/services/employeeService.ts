@@ -133,6 +133,7 @@ export const deleteEmployeeById = async (id: number): Promise<Employee | null> =
 
 
 export const getEmployeeById = async (id: number): Promise<Employee | null> => {
+    console.log("Getting data for employee " + id)
     const res = await fetch(`http://localhost:8100/employees?id=${id}`, {
         method: "GET"
     });
@@ -140,5 +141,6 @@ export const getEmployeeById = async (id: number): Promise<Employee | null> => {
         throw new Error('Could not get Employee');
     }
     const data = await res.json();
+    console.log(data)
     return data[0];
 };

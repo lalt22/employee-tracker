@@ -77,11 +77,11 @@ public class Employee {
 		this.address = address;
 	}
 
-	public int getPermOrContract() {
+	public String getPermOrContract() {
 		return permOrContract;
 	}
 
-	public void setPermOrContract(int permOrContract) {
+	public void setPermOrContract(String permOrContract) {
 		this.permOrContract = permOrContract;
 	}
 
@@ -148,7 +148,7 @@ public class Employee {
 	private String address;
 	
 	@Column
-	private int permOrContract;
+	private String permOrContract;
 	
 	@Column
 	private String startDate;

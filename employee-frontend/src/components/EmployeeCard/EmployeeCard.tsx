@@ -31,10 +31,6 @@ const EmployeeCard = ({employee, handleDelete}: EmployeeCardInterface) => {
             <p className="data email">{employee.email}</p>
             <p className="data mobile">{employee.mobileNumber}</p>
             <p className="data">{formatDate(employee.startDate)}</p>
-            <p className="data">{employee.permOrContract}</p>
-            <p className="data number">{employee.isOngoing ? "true": "false"}</p>
-            <p className="data number">{employee.isFullTime}</p>
-            <p className="data number">{employee.hoursPerWeek}</p>
         </div>
     )
 }

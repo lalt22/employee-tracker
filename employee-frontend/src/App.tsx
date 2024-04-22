@@ -6,6 +6,7 @@ import EmployeesPage from './pages/EmployeesPage/EmployeesPage';
 import CreatePage from './pages/CreatePage/CreatePage';
 import EmployeePage from './pages/EmployeePage/EmployeePage';
 import EditEmployee from './pages/EditPage/EditEmployee';
+import AnalyticsPage from './pages/AnalyticsPage/AnalyticsPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='trackEmp/new' element={<CreatePage />}/>
           <Route path='trackEmp/employees/:id' element={<EmployeePage />}/>
           <Route path='trackEmp/employees/:id/edit' element={<EditEmployee/>}/>
+          <Route path='trackEmp/analytics' element={<AnalyticsPage />} />
         </Routes>
         </BrowserRouter>
       </RefreshContextProvider>

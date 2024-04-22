@@ -3,7 +3,6 @@ import { createNewEmployee, editEmployeeById } from "../../services/employeeServ
 import { Employee } from "../../store/features/employeeSlice";
 import "./Form.scss"
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../../store";
 export type Inputs = {
     firstName: string
     middleName: string
@@ -28,7 +27,6 @@ const Form = ({newEmployee}: formProps) => {
     const {
         register,
         handleSubmit,
-
         formState: { errors }
     } = useForm<Inputs>()
     const navigate = useNavigate();

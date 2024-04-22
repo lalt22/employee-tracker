@@ -4,8 +4,8 @@
 
 .employees {
     margin-top: 100px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 40px;
 
     display: flex;
@@ -16,15 +16,16 @@
         justify-content: space-around;
         align-items: center;
         margin-top: 20px;
-        padding-left: 60px;
-        background-color: rgba(179, 179, 179, 0.308);
-        border-radius: 10px;
+        padding-left: 47px;
+        background-color: rgba(205, 198, 198, 0.464);
+        border-radius: 8px;
 
         & button {
             display: flex;
             justify-content: center;
             width: 8%;
             background-color: rgba(179, 179, 179, 0.308);
+            border-radius: 0%;
 
             &:hover {
                 background-color: rgba(122, 122, 255, 0.466);
@@ -42,9 +43,6 @@
                 font-size: small;
             }
         }
-
-
-
 
     }
 

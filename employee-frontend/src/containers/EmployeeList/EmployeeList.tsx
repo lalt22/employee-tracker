@@ -40,16 +40,12 @@ const EmployeeList = () => {
                 <button onClick={handleNew} className="new-emp">Add Employee</button>
                 <div className="data-btns">
                     <button className="number" onClick={() => handleSort("id")}>ID</button>
-                    <button className="name" onClick={() => handleSort("firstName")}>First Name</button>
-                    <button className="name" onClick={() => handleSort("middleName")}>Middle Name</button>
-                    <button className="name" onClick={() => handleSort("lastName")}>Last Name</button>
+                    <button className="name" onClick={() => handleSort("firstName")}>First</button>
+                    <button className="name" onClick={() => handleSort("middleName")}>Middle</button>
+                    <button className="name" onClick={() => handleSort("lastName")}>Last</button>
                     <button className="email" onClick={() => handleSort("email")}>Email</button>
                     <button className="mobile" onClick={() => handleSort("mobileNumber")}>Mobile</button>
-                    <button onClick={() => handleSort("startDate")}>Start Date</button>
-                    <button onClick={() => handleSort("permOrContract")}>Contract Type</button>
-                    <button className="number" onClick={() => handleSort("isOngoing")}>On going?</button>
-                    <button className="number" onClick={() => handleSort("isFullTime")}>Full-Time?</button>
-                    <button className="number" onClick={() => handleSort("hoursPerWeek")}>Hours</button>
+                    <button onClick={() => handleSort("startDate")}>Start</button>
                 </div>
             </div>
             {employees &&

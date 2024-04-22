@@ -18,7 +18,7 @@ const EmployeePage = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-
+        console.log("Loading data for employee " + employee?.id)
         getEmployeeById(parseInt(id!)).then((res) => setEmployee(res))
     }, [refresh])
 
@@ -26,6 +26,10 @@ const EmployeePage = () => {
     const handleEdit = () => {
         navigate(`/trackEmp/employees/${id}/edit`)
     }
+
+    useEffect(() => {
+        console.log(employee)
+    }, [employee])
 
 
     return (

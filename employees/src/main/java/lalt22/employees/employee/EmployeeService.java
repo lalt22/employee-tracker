@@ -39,4 +39,19 @@ public class EmployeeService {
 		this.employeeRepository.deleteById(id);
 		return toDelete.orElseThrow();
 	}
+	
+	public Optional<Employee> updateEmployeeById(UpdateEmployeeDTO data, Long id) {
+		Optional<Employee> toUpdate = this.employeeRepository.findById(id);
+		if (toUpdate.isEmpty()) {
+			return null;
+		}
+		Employee foundEmployee = toUpdate.get();
+		mapper.map(data, foundEmployee);
+		Employee updatedEmployee = this.employeeRepository.save(foundEmployee);
+		return Optional.of(updatedEmployee);
+	}
+	
+	public Optional<Employee> getById(Long id) {
+		return this.employeeRepository.findById(id);
+	}
 }
