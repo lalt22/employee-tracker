@@ -13,17 +13,18 @@
 
     & .data-btns {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         margin-top: 20px;
-        padding-left: 47px;
+        margin-left: 30px;
+        padding-left: 150px;
         background-color: rgba(205, 198, 198, 0.464);
         border-radius: 8px;
 
         & button {
             display: flex;
             justify-content: center;
-            width: 8%;
+            width: 10%;
             background-color: rgba(179, 179, 179, 0.308);
             border-radius: 0%;
 
@@ -31,9 +32,6 @@
                 background-color: rgba(122, 122, 255, 0.466);
             }
 
-            &.number {
-                width: 3%;
-            }
 
             &.email {
                 font-size: small;

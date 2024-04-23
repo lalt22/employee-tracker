@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import jakarta.validation.Valid;
 
 @RestController
@@ -53,6 +52,7 @@ public class EmployeeController {
 	
 	@PatchMapping("/{id}")
 	public ResponseEntity<Employee> updateEmployeeById(@Valid @RequestBody UpdateEmployeeDTO data, @PathVariable Long id){
+		System.out.println(data.getFinishDate());
 		Optional<Employee> maybeUpdatedEmployee = this.employeeService.updateEmployeeById(data, id);
 		Employee updatedEmployee = maybeUpdatedEmployee.orElseThrow();
 		return new ResponseEntity<>(updatedEmployee, HttpStatus.OK);

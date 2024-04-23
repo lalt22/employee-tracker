@@ -17,6 +17,11 @@
         text-decoration: none;
         color: rgba(167, 4, 4, 0.808);
 
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        
 
     }
 

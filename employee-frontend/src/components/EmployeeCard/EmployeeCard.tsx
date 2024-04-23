@@ -24,7 +24,10 @@ const EmployeeCard = ({employee, handleDelete}: EmployeeCardInterface) => {
     return (
         <div className="employee-card">
             <FontAwesomeIcon className="delete" icon={faTrash} onClick={() => handleDelete(employee)}/>
-            <Link to={`/trackEmp/employees/${employee.id}`} className="data number">{employee.id}</Link>
+            <div className="data">
+                <Link to={`/trackEmp/employees/${employee.id}`} className="number">{employee.id}</Link>
+            </div>
+            
             <p className="data name">{employee.firstName}</p>
             <p className="data name">{employee.middleName}</p>
             <p className="data name">{employee.lastName}</p>

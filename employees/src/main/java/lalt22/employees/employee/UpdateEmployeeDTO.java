@@ -28,7 +28,7 @@ public class UpdateEmployeeDTO {
 		@JsonFormat(pattern="dd-mm-yyyy")
 		private String startDate;
 
-		private String endDate;
+		private String finishDate;
 		
 		private Boolean isOngoing;
 		
@@ -68,12 +68,12 @@ public class UpdateEmployeeDTO {
 			this.startDate = startDate;
 		}
 
-		public String getEndDate() {
-			return endDate;
+		public String getFinishDate() {
+			return finishDate;
 		}
 
-		public void setEndDate(String endDate) {
-			this.endDate = endDate;
+		public void setFinishDate(String finishDate) {
+			this.finishDate = finishDate;
 		}
 
 		public Boolean getIsOngoing() {

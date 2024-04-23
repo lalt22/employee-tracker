@@ -60,8 +60,14 @@ const EmployeePage = () => {
                             <h3 style={{display: "inline"}}>Finish Date </h3>
                             <p style={{display: "inline"}}>{employee.finishDate}</p>
                             <br />
+                            <h3 style={{display: "inline"}}>Contract Type </h3>
+                            <p style={{display: "inline"}}>{employee.permOrContract}</p>
+                            <br />
                             <h3 style={{display: "inline"}}>Hours </h3>
                             <p style={{display: "inline"}}>{employee.hoursPerWeek}</p>
+                            <br />
+                            <h3 style={{display: "inline"}}>Ongoing? </h3>
+                            <p style={{display: "inline"}}>{employee.isOngoing ? "Yes" : "No"}</p>
                         </div>
                     </div>
                     <button onClick={handleEdit} className="edit">Edit Profile</button>
