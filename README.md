@@ -52,7 +52,7 @@ Added pyplot analytics. Connected mysql db to FastAPI python app to serve analyt
 Made styling changes to employees list
 
 To-do:
-- Refine form validation, especially on updates
+- Refine form validation, especially on updates - zod resolver
 - Add more analytics, specifically regarding address demographics
 - Google Maps API integration
 - Make charts interactable on frontend - hover to see %s, nums, etc
